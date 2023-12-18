@@ -82,9 +82,12 @@ We hope you enjoy using Jp·Shop!
 
 Resources list that I find helpful and would like to give credit to.
 
+- [FreeCodeCamp - guideline](https://www.freecodecamp.org/learn/front-end-development-libraries/front-end-development-libraries-projects/build-a-drum-machine)
+- [FreeCodeCamp](https://www.freecodecamp.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Vite.js](https://vitejs.dev/)
 - [React.js](https://reactjs.org/)
 - [Vercel](https://vercel.com/)
+-
 
 <p align="right">(<a href="#top">👆 Top 👆</a>)</p>
