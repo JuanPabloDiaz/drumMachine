@@ -1,8 +1,19 @@
-import "./App.css";
 import DrumPad from "./Components/DrumPad";
 import Layout from "./components/Layout";
+import { useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
+  const [activeKey, setActiveKey] = useState("");
+
+  // enable keyboard input for drum pads
+  useEffect(() => {
+    document.addEventListener("keydown", (e) => {
+      playSound(e.key.toUpperCase());
+      // console.log("key: ", e.key);
+    });
+  }, []);
+
   // const drumPads = [
   //   { id: "pad1", triggerKey: "Q", src: "path/to/audio1.mp3" },
   //   { id: "pad2", triggerKey: "W", src: "path/to/audio2.mp3" },
@@ -17,47 +28,38 @@ function App() {
 
   const drumPads = [
     {
-      keyCode: 81,
       triggerKey: "Q",
       src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3",
     },
     {
-      keyCode: 87,
       triggerKey: "W",
       src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3",
     },
     {
-      keyCode: 69,
       triggerKey: "E",
       src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3",
     },
     {
-      keyCode: 65,
       triggerKey: "A",
       src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3",
     },
     {
-      keyCode: 83,
       triggerKey: "S",
       src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3",
     },
     {
-      keyCode: 68,
       triggerKey: "D",
       src: "https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3",
     },
     {
-      keyCode: 90,
       triggerKey: "Z",
       src: "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3",
     },
     {
-      keyCode: 88,
       triggerKey: "X",
       src: "https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3",
     },
     {
-      keyCode: 67,
       triggerKey: "C",
       src: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3",
     },
@@ -67,20 +69,20 @@ function App() {
     const audio = document.getElementById(selector);
     // console.log("audio: ", audio);
     audio.play();
+
+    setActiveKey(selector);
   }
 
   return (
     <>
       <Layout>
-        <div id="drum-machine" className=" triggerKey-white">
-          <div
-            id="display"
-            className="grid grid-rows-3 grid-flow-col gap-4 border-4 border-white rounded-lg p-6 shadow-xl shadow-orange-500"
-          >
+        <div id="drum-machine" className="text-white ">
+          <div id="display">{activeKey}</div>
+          <div className="grid grid-rows-3 grid-flow-col gap-4 border-4 border-white rounded-lg p-6 shadow-xl shadow-orange-500">
             {drumPads.map((drum) => (
               <DrumPad
-                key={drum.keyCode}
-                id={drum.keyCode}
+                key={drum.src}
+                id={drum.src}
                 className="drum-pad"
                 triggerKey={drum.triggerKey}
                 onClick={() => playSound(drum.triggerKey)}
