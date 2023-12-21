@@ -76,7 +76,12 @@ function App() {
   return (
     <>
       <Layout>
-        <div id="drum-machine" className="text-white ">
+        <div id="drum-machine" className=" ">
+          <div className="fixed top-10 border-2 rounded-lg p-2 shadow-lg shadow-amber-400">
+            <h1 className="text-3xl font-bold text-sky-500 mb-4">
+              Drum Machine
+            </h1>
+          </div>
           <div id="display">{activeKey}</div>
           <div className="grid grid-rows-3 grid-flow-col gap-4 border-4 border-white rounded-lg p-6 shadow-xl shadow-orange-500">
             {drumPads.map((drum) => (
