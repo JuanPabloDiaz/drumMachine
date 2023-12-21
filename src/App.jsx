@@ -17,55 +17,46 @@ function App() {
 
   const drumPads = [
     {
-      id: "1",
       keyCode: 81,
       triggerKey: "Q",
       src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3",
     },
     {
-      id: "2",
       keyCode: 87,
       triggerKey: "W",
       src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3",
     },
     {
-      id: "3",
       keyCode: 69,
       triggerKey: "E",
       src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3",
     },
     {
-      id: "4",
       keyCode: 65,
       triggerKey: "A",
       src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3",
     },
     {
-      id: "5",
       keyCode: 83,
       triggerKey: "S",
       src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3",
     },
     {
-      id: "6",
       keyCode: 68,
       triggerKey: "D",
       src: "https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3",
     },
     {
-      id: "7",
       keyCode: 90,
       triggerKey: "Z",
       src: "https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3",
     },
     {
-      id: "8",
       keyCode: 88,
       triggerKey: "X",
       src: "https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3",
     },
     {
-      id: "9",
       keyCode: 67,
       triggerKey: "C",
       src: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3",
@@ -80,13 +71,14 @@ function App() {
             id="display"
             className="grid grid-rows-3 grid-flow-col gap-4 border-4 border-white rounded-lg p-6 shadow-xl shadow-orange-500"
           >
-            {drumPads.map((pad) => (
+            {drumPads.map((drum) => (
               <DrumPad
-                key={pad.id}
-                id={pad.id}
-                triggerKey={pad.triggerKey}
-                onClick={() => console.log(pad.id)}
-                src={pad.src}
+                key={drum.keyCode}
+                id={drum.triggerKey}
+                className="drum-pad"
+                triggerKey={drum.triggerKey}
+                onClick={() => console.log(drum.triggerKey)}
+                src={drum.src}
               />
             ))}
           </div>
