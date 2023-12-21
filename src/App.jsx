@@ -1,5 +1,5 @@
-import DrumPad from "./Components/DrumPad";
-import Layout from "./components/Layout";
+import DrumPad from "./Components/DrumPad.jsx";
+import Layout from "./Components/Layout/index.jsx";
 import { useEffect, useState } from "react";
 import "./App.css";
 
