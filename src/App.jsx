@@ -63,6 +63,12 @@ function App() {
     },
   ];
 
+  function playSound(selector) {
+    const audio = document.getElementById(selector);
+    // console.log("audio: ", audio);
+    audio.play();
+  }
+
   return (
     <>
       <Layout>
@@ -74,10 +80,10 @@ function App() {
             {drumPads.map((drum) => (
               <DrumPad
                 key={drum.keyCode}
-                id={drum.triggerKey}
+                id={drum.keyCode}
                 className="drum-pad"
                 triggerKey={drum.triggerKey}
-                onClick={() => console.log(drum.triggerKey)}
+                onClick={() => playSound(drum.triggerKey)}
                 src={drum.src}
               />
             ))}
