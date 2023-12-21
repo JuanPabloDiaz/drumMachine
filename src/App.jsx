@@ -1,6 +1,8 @@
 import DrumPad from "./Components/DrumPad.jsx";
 import Layout from "./Components/Layout/index.jsx";
 import { useEffect, useState } from "react";
+import { FaDrum } from "react-icons/fa";
+
 import "./App.css";
 
 function App() {
@@ -77,12 +79,14 @@ function App() {
     <>
       <Layout>
         <div id="drum-machine" className=" ">
-          <div className="fixed top-10 border-2 rounded-lg p-2 shadow-lg shadow-amber-400">
-            <h1 className="text-3xl font-bold text-sky-500 mb-4">
-              Drum Machine
-            </h1>
+          <div className="fixed flex justify-center items-center gap-2 top-10 border-2 rounded-lg p-2 shadow-lg shadow-amber-400 text-sky-500">
+            <FaDrum className="h-8 w-8" />
+            <h1 className="text-3xl font-bold mb-4">BeatBoxify</h1>
+            <FaDrum className="h-8 w-8" />
           </div>
-          <div id="display">{activeKey}</div>
+          <div id="display" className="text-white">
+            {activeKey}
+          </div>
           <div className="grid grid-rows-3 grid-flow-col gap-4 border-4 border-white rounded-lg p-6 shadow-xl shadow-orange-500">
             {drumPads.map((drum) => (
               <DrumPad
