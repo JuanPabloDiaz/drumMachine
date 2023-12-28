@@ -2,7 +2,7 @@
 
 # Drum Machine 🥁
 
-This simple project is a responsive web application that allows users to play drum sounds by pressing keys on their keyboard or by clicking on the buttons on the screen. The project was built as part of the [freeCodeCamp](https://www.freecodecamp.org/) Front End Libraries Certification.
+This simple project is a responsive web application that allows users to play drum sounds by pressing keys on their keyboard or by clicking on the buttons on the screen.
 
 ## Description 💡
 
@@ -17,11 +17,15 @@ This project was built as part of the **[freeCodeCamp Front End Libraries Certif
 
 ### Desktop View 🖥️
 
-<img src="./image.png" width="" />
+<img src="./src/assets/images/desktop.png" width="" />
 
-### Mobile view📱
+### iPad view 📱
 
-<img src="./mobile.png" width="250" />
+<img src="./src/assets/images/desktop.png" width="300" />
+
+### Mobile view 📱
+
+<img src="./src/assets/images/desktop.png" width="250" />
 
 ## Features:
 
@@ -40,7 +44,7 @@ Welcome to [drum machine](https://drum.jpdiaz.dev), a simple drum machine build 
 Here's a closer look at the tech stack:
 
 - Front-End: React.js, Vite.js, Tailwind CSS
-- Back-End: API Integration (RESTful)
+- Back-End: None
 - Deployment: Vercel
 
 ## Get started 🛠️
@@ -101,6 +105,5 @@ Resources list that I find helpful and would like to give credit to.
 - [Vite.js](https://vitejs.dev/)
 - [React.js](https://reactjs.org/)
 - [Vercel](https://vercel.com/)
--
 
 <p align="right">(<a href="#top">👆 Top 👆</a>)</p>

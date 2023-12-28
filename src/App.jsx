@@ -16,18 +16,6 @@ function App() {
     });
   }, []);
 
-  // const drumPads = [
-  //   { id: "pad1", triggerKey: "Q", src: "path/to/audio1.mp3" },
-  //   { id: "pad2", triggerKey: "W", src: "path/to/audio2.mp3" },
-  //   { id: "pad3", triggerKey: "E", src: "path/to/audio3.mp3" },
-  //   { id: "pad4", triggerKey: "A", src: "path/to/audio4.mp3" },
-  //   { id: "pad5", triggerKey: "S", src: "path/to/audio5.mp3" },
-  //   { id: "pad6", triggerKey: "D", src: "path/to/audio6.mp3" },
-  //   { id: "pad7", triggerKey: "Z", src: "path/to/audio7.mp3" },
-  //   { id: "pad8", triggerKey: "X", src: "path/to/audio8.mp3" },
-  //   { id: "pad9", triggerKey: "C", src: "path/to/audio9.mp3" },
-  // ];
-
   const drumPads = [
     {
       triggerKey: "Q",
@@ -78,16 +66,22 @@ function App() {
   return (
     <>
       <Layout>
-        <div id="drum-machine" className=" ">
-          <div className="fixed flex justify-center items-center gap-2 top-10 border-2 rounded-lg p-2 shadow-lg shadow-amber-400 text-sky-500">
+        <div
+          id="drum-machine"
+          className=" bg-[#4C4B51] border-2 border-black rounded-lg p-6 shadow-md shadow-[#4C4B51]"
+        >
+          <div className="fixed flex justify-center items-center gap-3 top-20 p-2 text-sky-500">
             <FaDrum className="h-8 w-8" />
             <h1 className="text-3xl font-bold mb-4">BeatBoxify</h1>
             <FaDrum className="h-8 w-8" />
           </div>
-          <div id="display" className="text-white">
+          <div
+            id="display"
+            className="flex justify-center h-10 w-60 p-2 m-2 rounded-lg bg-[#08080A] text-white"
+          >
             {activeKey}
           </div>
-          <div className="grid grid-rows-3 grid-flow-col gap-4 border-4 border-white rounded-lg p-6 shadow-xl shadow-orange-500">
+          <div className="grid grid-rows-3 grid-flow-col gap-4 ">
             {drumPads.map((drum) => (
               <DrumPad
                 key={drum.src}
