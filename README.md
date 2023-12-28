@@ -21,11 +21,11 @@ This project was built as part of the **[freeCodeCamp Front End Libraries Certif
 
 ### iPad view 📱
 
-<img src="./src/assets/images/desktop.png" width="300" />
+<img src="./src/assets/images/ipad.png" width="300" />
 
 ### Mobile view 📱
 
-<img src="./src/assets/images/desktop.png" width="250" />
+<img src="./src/assets/images/phone.png" width="250" />
 
 ## Features:
 
