@@ -68,7 +68,7 @@ I welcome contributions to the [drum machine](https://drum.jpdiaz.dev)! Feel fre
 
 [drum machine](https://drum.jpdiaz.dev) is licensed under the MIT License.
 
-We hope you enjoy using the drum machine!
+I hope you enjoy using the drum machine!
 
 <!-- OTHER PROJECTS -->
 
