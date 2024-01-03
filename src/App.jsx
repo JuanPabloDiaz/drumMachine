@@ -68,20 +68,20 @@ function App() {
       <Layout>
         <div
           id="drum-machine"
-          className=" bg-[#4C4B51] border-2 border-black rounded-lg p-6 shadow-md shadow-[#4C4B51]"
+          className=" rounded-lg border-2 border-black bg-[#4C4B51] p-6 shadow-md shadow-[#4C4B51]"
         >
-          <div className="fixed flex justify-center items-center gap-3 top-20 p-2 text-sky-500">
+          <div className="fixed top-20 flex items-center justify-center gap-3 p-2 text-sky-500">
             <FaDrum className="h-8 w-8" />
-            <h1 className="text-3xl font-bold mb-4">BeatBoxify</h1>
+            <h1 className="mb-4 text-3xl font-bold">BeatBoxify</h1>
             <FaDrum className="h-8 w-8" />
           </div>
           <div
             id="display"
-            className="flex justify-center h-10 w-60 p-2 m-2 rounded-lg bg-[#08080A] text-white"
+            className="m-2 flex h-10 w-60 justify-center rounded-lg bg-[#08080A] p-2 text-white"
           >
             {activeKey}
           </div>
-          <div className="grid grid-rows-3 grid-flow-col gap-4 ">
+          <div className="grid grid-flow-col grid-rows-3 gap-4 ">
             {drumPads.map((drum) => (
               <DrumPad
                 key={drum.src}

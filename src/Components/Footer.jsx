@@ -1,11 +1,11 @@
 const Footer = () => {
   return (
     <>
-      <div className="flex justify-end fixed bottom-10 w-5/6 gap-2">
-        <p className="text-sm sm:text-md md:text-lg font-normal text-[#5f5f5f]">
+      <div className="fixed bottom-10 flex w-5/6 justify-end gap-2">
+        <p className="sm:text-md text-sm font-normal text-[#5f5f5f] md:text-lg">
           Developed by:
         </p>
-        <span className="text-sm sm:text-md md:text-lg font-normal text-[#EF5E6D] hover:text-black transition duration-300">
+        <span className="sm:text-md text-sm font-normal text-[#EF5E6D] transition duration-300 hover:text-black md:text-lg">
           <a href="https://jpdiaz.dev/">Juan Diaz</a>
         </span>
       </div>
